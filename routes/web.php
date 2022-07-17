@@ -18,6 +18,8 @@ use App\Http\Controllers\ProfileController;
 |
 */
 
+
+
 Route::get('/', [HomeController::class,'page'])->name('home');
 
 Route::middleware("auth")->group(function (){
