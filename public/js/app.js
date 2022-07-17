@@ -5353,7 +5353,7 @@ __webpack_require__.r(__webpack_exports__);
         }
       }
 
-      for (var _i = 0; _i < this.bookings.length; _i++) {
+      for (var _i = 0; _i < this.rooms.length; _i++) {
         if (!this.result.includes(this.rooms[_i].id) && this.rooms[_i].people >= this.people && this.rooms[_i].apartment_id == this.data) {
           this.result1[k] = this.rooms[_i];
           k++;

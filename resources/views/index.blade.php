@@ -51,7 +51,7 @@
 
             <div class="p-3 w-75 bg-light border rounded-3 center-box wrapper" style="margin-bottom: 10px">
                 <div class="box1">
-                    <img src="{{$x->image_1}}" class="w-100" />
+                    <img src="{{$x->image_1}}" class="w-100 h-75" />
                 </div>
                 <div>
                 <h2 class="text-center"><a class="link-dark" href="{{route('info-def', $x->id)}}" target="_blank">{{$x->name}}</a></h2>

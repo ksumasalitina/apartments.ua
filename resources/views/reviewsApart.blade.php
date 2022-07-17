@@ -7,7 +7,14 @@
     @foreach($apart as $a)
     <h2 align="center">Відгуки {{$a->name}}</h2>
     @auth("web")
+        @if(auth()->user()->email_verified_at == null)
+            <span class="alert-danger">Ваш email не підтвердженно.
+                             Будь ласка перевірте пошту та перейдіть за посиланням для підтвердження.</span>
+            <a href="{{route('verification.send')}}">Надіслати email повторно</a>
+            <button class="btn btn-dark" disabled style="margin-left: 3%">Залишити відгук</button>
+        @else
     <button class="btn btn-dark" @click="showReviewForm" style="margin-left: 3%">Залишити відгук</button>
+        @endif
     @endauth
     <div id="div1" style="margin: 3%">
     <form action="{{route('send-review')}}" method="POST">

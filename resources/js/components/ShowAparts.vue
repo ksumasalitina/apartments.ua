@@ -19,6 +19,7 @@
         <button class="btn btn-dark" @click="getResult">Пошук</button>
     </div>
     <div v-if="visible">
+
         <h2 class="find-apart rooms-header" align="center"><em>Доступні номери для бронювання:</em></h2>
         <div class="center-box w-75">
             <table class="table">
@@ -86,8 +87,8 @@ export default {
                     j++;
                 }
             }
-            for(let i=0;i<this.bookings.length;i++){
-                if(!this.result.includes(this.rooms[i].id) && this.rooms[i].people>=this.people
+            for(let i=0;i<this.rooms.length;i++){
+                if((!this.result.includes(this.rooms[i].id)) && this.rooms[i].people>=this.people
                     && this.rooms[i].apartment_id==this.data){
                     this.result1[k] = this.rooms[i];
                     k++;
