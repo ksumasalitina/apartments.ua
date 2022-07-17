@@ -19,9 +19,11 @@
                 <div style="display: inline-block">
                     <a href="{{route('reviewsApart',$apartment->id)}}" class="btn btn-dark">Відгуки</a>
                 </div>
+                    @auth("web")
                 <div style="display: inline-block">
                     <a href="{{route('add-favorite',$apartment->id)}}" class="btn btn-dark">Додати у вподобання</a>
                 </div>
+                    @endauth
                 </div>
                 <p align="center" style="margin-top: 15px" class="fw-light">{{$apartment->description}}</p>
             </div>

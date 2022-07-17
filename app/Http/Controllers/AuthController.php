@@ -39,7 +39,7 @@ class AuthController extends Controller
         $user->password = bcrypt($password);
         $user->save();
         Mail::to($user)->send(new ForgotPassword($password));
-        return redirect(route('auth.signinForm'));
+        return redirect(route('login'));
     }
 
     public function logout(){
@@ -50,7 +50,7 @@ class AuthController extends Controller
     public function login(Request $request){
         $data = $request->validate([
             "email" => ["required", "email", "string"],
-            "password" => ["required"],
+            "password" => ["required", "min:8"],
         ]);
         if(auth("web")->attempt($data)){
             return redirect(route('home'));

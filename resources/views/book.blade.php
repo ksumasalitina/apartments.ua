@@ -17,7 +17,9 @@
             </div>
             <div class="col-sm-6">
                 <label for="lastName" class="form-label">Прізвище</label>
-                <input type="text" class="form-control" id="lastName" name="lastName" value="{{$lastName}}" required>
+
+                <input type="text" class="form-control" id="lastName" name="lastName" value="" required>
+
             </div>
             <div class="col-12" style="margin-top: 15px">
                 <label for="email" class="form-label">Email</label>

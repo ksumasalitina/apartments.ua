@@ -20,7 +20,7 @@ class BookController extends Controller
         $startDate2 = DateTime::createFromFormat("Y-m-d", $startDate);
         $endDate = request()->cookie('endDate');
         $endDate1 = DateTime::createFromFormat("Y-m-d", $endDate);
-        $lastName = Profile::select('lastname')->where('user_id', '=', auth()->user()->id)->limit('1')->get();
+        $lastName = Profile::select('lastname')->where('user_id', '=', auth()->user()->id)->get();
         $days = $endDate1->diff($startDate2)->d;
         $total = $room->cost*$days;
         $people = request()->cookie('people');
@@ -31,8 +31,7 @@ class BookController extends Controller
             'startDate'=>$startDate,
             'endDate'=>$endDate,
             'people'=>$people,
-            'total'=>$total,
-            'lastName'=>'']);}
+            'total'=>$total]);}
         else{
             return redirect(route('auth.login'));
         }
