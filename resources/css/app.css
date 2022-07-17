@@ -1,0 +1,78 @@
+.header_text{
+    margin: 0;
+    color:#8B0000;
+}
+.find-apart{
+    margin-left: 2em;
+    margin-bottom: 1em;
+}
+
+.find-form{
+    border: 1px solid grey;
+    height: 40px;
+    border-radius: .25rem;
+}
+
+.comment{
+    border: 1px solid grey;
+    height: 150px;
+    width: 450px;
+    margin-top: 10px;
+    border-radius: .25rem;
+}
+/*footer{
+    /*position: absolute;
+left: 0; bottom: 0;
+    width: 100%;  Ширина слоя
+}*/
+
+.center-box{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container {
+    width: auto;
+    max-width: 680px;
+    padding: 0 15px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-auto-rows: 100px;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper1 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.box2{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    margin-right: 10px;
+}
+.box1{
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+.wrapper2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.rooms-header{
+    margin-top: 10px;
+    color: #6a1a21;
+    align-content: center;
+}
+
+#div1{
+    display: none;
+}
